@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Z键框选并点击",
+  "version": "1.0",
+  "description": "按下 Z 键后可以框选网页元素并对选中的所有元素执行点击操作。",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
